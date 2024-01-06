@@ -12,14 +12,14 @@ static const char *mednextcmd[] = { "playerctl", "next", NULL };
 static const char *medprevcmd[] = { "playerctl", "previous", NULL };
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 10;        /* border pixel of windows */
 static const unsigned int gappx     = 10;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int user_bh            = 23;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
-static const char *fonts[]          = { "JetBrainsMono Nerd Font:size=12" };
-static const char dmenufont[]       = "JetBrainsMono Nerd Font:size=12";
+static const char *fonts[]          = { "FiraCode Nerd Font:style=Retina:size=12" };
+static const char dmenufont[]       = "FiraCode Nerd Font:style=Retina:size=12";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
