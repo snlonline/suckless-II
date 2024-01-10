@@ -6,6 +6,10 @@ static const char *upvol[]      = { "/usr/bin/pactl",   "set-sink-volume", "0", 
 static const char *downvol[]    = { "/usr/bin/pactl",   "set-sink-volume", "0",      "-5%",      NULL };
 static const char *mutevol[]    = { "/usr/bin/pactl",   "set-sink-mute",   "0",      "toggle",   NULL };
 
+// Brightness Commands
+static const char *brupcmd[] = { "brightnessctl", "set", "10%+", NULL };
+static const char *brdowncmd[] = { "brightnessctl", "set", "10%-", NULL };
+
 /* Control Media Players */
 static const char *medplaypausecmd[] = { "playerctl", "play-pause", NULL };
 static const char *mednextcmd[] = { "playerctl", "next", NULL };
@@ -95,6 +99,10 @@ static const Key keys[] = {
 	{ 0,                       XF86XK_AudioMute, spawn, {.v = mutevol } },
 	{ 0,                       XF86XK_AudioRaiseVolume, spawn, {.v = upvol   } },
 	
+	/*Brightness*/
+	{ 0, XF86XK_MonBrightnessUp,  spawn,          {.v = brupcmd} },
+    { 0, XF86XK_MonBrightnessDown, spawn,          {.v = brdowncmd} },
+
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
